@@ -1,9 +1,13 @@
 "use strict";
 
-const ul = document.getElementById("meineUL");
-
 function addElement() {
+    const input = document.getElementById("input");
+    const text = input.value;
+
+    const ul = document.getElementById("meineUL");
+
     const li = document.createElement("li");
-    li.innerHTML = "new list item";
+    li.innerHTML = text;
+
     ul.appendChild(li);
 }
