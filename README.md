@@ -15,9 +15,13 @@ Ordered List `<ol>`:
 ## 12.09.2023
 ### Abschnitt 1
 
-**Wichtig**
-> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+**Wichtig:**
+> Lorem ipsum dolor sit amet.
 
-[Wichtiger Link](https://github.com)
+[GitHub](https://github.com)
+
+Paragraph `<p>`:
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
 
 
