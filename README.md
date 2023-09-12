@@ -3,7 +3,7 @@ Material und Code zum Unterricht
 
 ## 05.09.2023
 ### Abschnitt 1
-
+---
 Unordered List `<ul>`:
 - erster Eintrag `<li>`
 - zweiter Eintrag `<li>`
@@ -14,7 +14,7 @@ Ordered List `<ol>`:
 
 ## 12.09.2023
 ### Abschnitt 1
-
+---
 **Wichtig:**
 > Lorem ipsum dolor sit amet.
 
