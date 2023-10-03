@@ -31,3 +31,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## 26.09.2023
 ### HÜ: FlexBox Froggy
+
+## 03.10.2023
+### HÜ: Exceptions, Funktionen
