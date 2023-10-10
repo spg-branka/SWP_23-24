@@ -34,3 +34,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## 03.10.2023
 ### HÜ: Exceptions, Funktionen
+
+## 10.10.2023
+### Promises
