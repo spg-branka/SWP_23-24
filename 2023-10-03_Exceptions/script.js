@@ -8,6 +8,7 @@ function myFunction(randomNum) {
 
 for (let i = 0; i < 15; i++) {
     let randomNum = Math.random();
+    console.log(`I ist momentan ${i}`);
     try {
         console.log(myFunction(randomNum));
     } catch (error) {
