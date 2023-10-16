@@ -36,4 +36,4 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 ### HÜ: Exceptions, Funktionen
 
 ## 10.10.2023
-### Promises
+### HÜ: Promises auf einer Website
