@@ -37,3 +37,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## 10.10.2023
 ### HÜ: Promises auf einer Website
+
+## 17.10.2023
+### PLF Vorbereitung
