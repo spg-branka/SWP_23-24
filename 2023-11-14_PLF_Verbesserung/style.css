@@ -41,6 +41,13 @@ article h2:hover {
 header {
     text-align: center;
 }
+footer {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.footerul {
+    background-color: #12375c;
+}
 .header2 {
     margin-bottom: 2em;
     text-align: unset;
