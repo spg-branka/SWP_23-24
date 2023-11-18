@@ -40,3 +40,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## 17.10.2023
 ### PLF Vorbereitung
+
+## 24.10.2023
+### PLF
+
+## 07.11.2023
+### -
+
+## 14.11.2023
+### Nachbesprechung PLF
