@@ -9,3 +9,70 @@ datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
+
+model Benutzer {
+  UserID       Int       @id @default(autoincrement())
+  StufenID     Int
+  Vorname      String
+  Nachname     String
+  Email        String
+  Passwort     String
+  Rolle        String
+}
+
+model Schulstufe {
+  StufenID     Int       @id @default(autoincrement())
+}
+
+model Fach {
+  FachID       Int       @id @default(autoincrement())
+  FachName     String
+  FachKuerzel  String
+}
+
+model Erstellungsdatum {
+  ErstellungsdatumID          Int @id @default(autoincrement())
+  Datum        DateTime
+}
+
+model Lernzettel {
+  LernzettelID          Int       @id @default(autoincrement())
+  Benutzer              Benutzer     @relation(fields: [UserID], references: [UserID])
+  UserID                Int
+  Fach                  Fach         @relation(fields: [FachID], references: [FachID])
+  FachID                Int
+  Schulstufe            Schulstufe   @relation(fields: [StufenID], references: [StufenID])
+  StufenID              Int
+  Erstellungsdatum      Erstellungsdatum @relation(fields: [ErstellungsdatumID], references: [ErstellungsdatumID])
+  ErstellungsdatumID    String
+  LernzettelTitel       String
+  LernzettelBeschreibung String
+}
+
+model Angebot {
+  AngebotID             Int       @id @default(autoincrement())
+  Benutzer              Benutzer     @relation(fields: [UserID], references: [UserID])
+  UserID                Int
+  Fach                  Fach         @relation(fields: [FachID], references: [FachID])
+  FachID                Int
+  Schulstufe            Schulstufe   @relation(fields: [StufenID], references: [StufenID])
+  StufenID              Int
+  Erstellungsdatum      Erstellungsdatum @relation(fields: [ErstellungsdatumID], references: [ErstellungsdatumID])
+  ErstellungsdatumID    String
+  AngebotTitel          String
+  AngebotBeschreibung   String
+}
+
+model Anfrage {
+  AnfrageID             String       @id
+  Benutzer              Benutzer     @relation(fields: [UserID], references: [UserID])
+  UserID                Int
+  Fach                  Fach         @relation(fields: [FachID], references: [FachID])
+  FachID                Int
+  Schulstufe            Schulstufe   @relation(fields: [StufenID], references: [StufenID])
+  StufenID              Int
+  Erstellungsdatum      Erstellungsdatum @relation(fields: [ErstellungsdatumID], references: [ErstellungsdatumID])
+  ErstellungsdatumID    String
+  AnfrageTitel          String
+  AnfrageBeschreibung   String
+}
