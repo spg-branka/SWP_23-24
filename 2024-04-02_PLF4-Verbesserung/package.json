@@ -1,0 +1,28 @@
+{
+  "name": "3hwii_plf4",
+  "version": "1.0.0",
+  "description": "## Vorbereitung",
+  "main": "index.js",
+  "scripts": {
+    "seed": "npx prisma db seed",
+    "dev-seed": "node --inspect seed.js",
+    "dev": "node --inspect query.js",
+    "run": "node query.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "@prisma/client": "^5.11.0"
+  },
+  "prisma": {
+    "seed": "node seed.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.5",
+    "prisma": "^5.12.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.4"
+  }
+}
