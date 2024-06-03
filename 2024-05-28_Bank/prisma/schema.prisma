@@ -1,0 +1,85 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.sqlite3"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// model Bank {
+//   id       String    @id @default(cuid())
+//   bic      String
+//   accounts Account[]
+// }
+
+// model Customer {
+//   id       String    @id @default(cuid())
+//   name     String
+//   email    String
+//   accounts Account[]
+// }
+
+// model Account {
+//   id               String        @id @default(cuid())
+//   iban             String
+//   customerId       String
+//   customer         Customer      @relation(fields: [customerId], references: [id])
+//   transactionsFrom Transaction[] @relation("fromAccount")
+//   transactionsTo   Transaction[] @relation("toAccount")
+//   Bank             Bank          @relation(fields: [bankId], references: [id])
+//   bankId           String
+// }
+
+// model Transaction {
+//   id               String   @id @default(cuid())
+//   verwendungszweck String
+//   date             DateTime
+//   amount           Float
+//   fromAcctId       String
+//   fromAcct         Account  @relation("fromAccount", fields: [fromAcctId], references: [id])
+//   toAcctId         String
+//   toAcct           Account  @relation("toAccount", fields: [toAcctId], references: [id])
+// }
+
+model Bank {
+  id       String    @id @default(cuid())
+  bic      String
+  accounts Account[]
+}
+
+model Customer {
+  id       String    @id @default(cuid())
+  name     String
+  email    String
+  accounts Account[]
+}
+
+model Account {
+  id               String        @id @default(cuid())
+  iban             String
+  customerId       String
+  customer         Customer      @relation(fields: [customerId], references: [id])
+  bankId           String
+  bank             Bank          @relation(fields: [bankId], references: [id])
+  transactionsFrom Transaction[] @relation("fromAccount")
+  transactionsTo   Transaction[] @relation("toAccount")
+}
+
+model Transaction {
+  id               String   @id @default(cuid())
+  verwendungszweck String
+  date             DateTime
+  amount           Float
+  fromAccount      Account  @relation("fromAccount", fields: [fromAccountId], references: [id])
+  fromAccountId    String
+  toAccount        Account  @relation("toAccount", fields: [toAccountId], references: [id])
+  toAccountId      String
+}
+
